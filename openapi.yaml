@@ -1,0 +1,282 @@
+openapi: 3.0.0
+info:
+  title: Conduit API
+  description: Collection for testing the Conduit API
+  version: 1.0.0
+ 
+servers:
+  - url: http://localhost:3000/api/
+ 
+ 
+paths:
+  /users:
+    post:
+      summary: Register a new user
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                user:
+                  type: object
+                  properties:
+                    email: { type: string }
+                    password: { type: string }
+                    username: { type: string }
+      responses:
+        '200':
+          description: User registered successfully
+ 
+  /users/login:
+    post:
+      summary: Login
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                user:
+                  type: object
+                  properties:
+                    email: { type: string }
+                    password: { type: string }
+      responses:
+        '200':
+          description: User logged in successfully
+ 
+ 
+  /user:
+    get:
+      responses:
+        '200':
+          description: Current user retrieved successfully
+      security:
+        - BearerAuth: []
+ 
+    put:
+      summary: Update user
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                user:
+                  type: object
+                  properties:
+                    email: { type: string }
+      responses:
+        '200':
+          description: User updated successfully
+      security:
+        - BearerAuth: []
+        
+  /articles:
+    get:
+      summary: Get all articles
+      responses:
+        '200':
+          description: Articles retrieved successfully
+ 
+    post:
+      summary: Create an article
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                article:
+                  type: object
+                  properties:
+                    title: { type: string }
+                    description: { type: string }
+                    body: { type: string }
+                    tagList: { type: array, items: { type: string } }
+      responses:
+        '200':
+          description: Article created successfully
+ 
+  /articles/{slug}:
+    get:
+      summary: Get a single article by slug
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Article retrieved successfully
+ 
+    put:
+      summary: Update an article
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                article:
+                  type: object
+                  properties:
+                    body: { type: string }
+      responses:
+        '200':
+          description: Article updated successfully
+ 
+    delete:
+      summary: Delete an article
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Article deleted successfully
+ 
+  /articles/{slug}/favorite:
+    post:
+      summary: Favorite an article
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Article favorited successfully
+ 
+    delete:
+      summary: Unfavorite an article
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Article unfavorited successfully
+ 
+  /articles/{slug}/comments:
+    post:
+      summary: Create a comment for an article
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                comment:
+                  type: object
+                  properties:
+                    body: { type: string }
+      responses:
+        '200':
+          description: Comment created successfully
+ 
+    get:
+      summary: Get all comments for an article
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Comments retrieved successfully
+ 
+  /articles/{slug}/comments/{commentId}:
+    delete:
+      summary: Delete a comment for an article
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: commentId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Comment deleted successfully
+ 
+  /profiles/celeb_{USERNAME}:
+    get:
+      summary: Get a profile by username
+      parameters:
+        - name: USERNAME
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Profile retrieved successfully
+ 
+  /profiles/celeb_{USERNAME}/follow:
+    post:
+      summary: Follow a profile
+      parameters:
+        - name: USERNAME
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Profile followed successfully
+ 
+    delete:
+      summary: Unfollow a profile
+      parameters:
+        - name: USERNAME
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Profile unfollowed successfully
+ 
+  /tags:
+    get:
+      summary: Get all tags
+      responses:
+        '200':
+          description: Tags retrieved successfully
+          
+components:
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
