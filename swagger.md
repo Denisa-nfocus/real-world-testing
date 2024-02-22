@@ -315,3 +315,112 @@ http://localhost:3000/api/user
   </tbody>
 </table>
 </details>
+
+<details>
+<summary>
+<span style="color:#F28C28"><b>PUT</span>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /user</b>
+&nbsp; &nbsp; &nbsp; Update user</summary>
+<br>
+
+**Parameters:** No parameters 
+
+**Request Body:**
+```
+{ 
+  "user": { 
+    "email": "user518_updated@testing.com" 
+  } 
+} 
+```
+
+**Responses:** 
+
+##### **Curl** #####
+
+```
+curl -X 'PUT' \ 
+  'http://localhost:3000/api/user' \ 
+  -H 'accept: */*' \ 
+  -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNsc3QxZDJ3czAwMDA2M3hiZTVsZHFsOHoiLCJpYXQiOjE3MDg1MTIxMDV9.9Ar6eoPvWM1ydXFwhsrUy2lHIhoLG5AnskFzAvd9sm4' \ 
+  -H 'Content-Type: application/json' \ 
+  -d '{ 
+  "user": { 
+    "email": "user518_updated@testing.com" 
+  } 
+}' 
+```
+
+##### **Request URL** #####
+
+http://localhost:3000/api/user
+
+##### **Server response** #####
+
+<table>
+  <thead>
+    <tr>
+      <th>Code</th>
+      <th>Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th rowspan=4>200</th>
+      <th>Response body</th>
+    </tr>
+    <tr>
+      <td> {
+      <br>
+      &nbsp; &nbsp;
+      "user": { 
+      <br>
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+      "email": "user518@testing.com",
+      <br>
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+      "username": "user518", 
+      <br>
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNsc3QxZDJ3czAwMDA2M3hiZTVsZHFsOHoiLCJpYXQiOjE3MDg1MTQ4Mjl9.yXS6DAQavtiwMcU5KFBg6syVuFmK1lqg_Db7CK2eiFA",
+      <br>
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+      "bio": null,
+      <br>
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+      "image": "null" 
+      <br>
+      &nbsp; &nbsp;
+      }
+      <br>
+      }
+      </td>
+    </tr>
+    <tr>
+      <th>Response headers</th>
+    </tr>
+    <tr>
+      <td>content-type: application/json </td>
+    </tr>
+  </tbody>
+</table>
+
+##### **Responses** #####
+<table>
+  <thead>
+    <tr>
+      <th>Code</th>
+      <th>Description</th>
+      <th>Links</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>200</td>
+      <td>User updated successfully</td>
+      <td><em>No links</em></td>
+    </tr>
+    <tr>
+  </tbody>
+</table>
+</details>
