@@ -2,7 +2,7 @@
 
 <details>
 
-<summary><b><span style="color:#008000">POST</span><span style="margin-left:1em">/users</span><span style="margin-left:5.4em"></b>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Register a new user</span></summary>
+<summary><b><span style="color:#008000">POST</span>&nbsp;&nbsp;/users<span style="margin-left:5.4em"></b>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Register a new user</span></summary>
 &nbsp;
 
 **Parameters:** No parameters
