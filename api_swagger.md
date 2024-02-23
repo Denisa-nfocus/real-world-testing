@@ -1,436 +1,344 @@
-## Swagger ##
+## Swagger
 
 <details>
-<summary>
-<span style="color:#008000"><b>PUT</span>
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /users</b>
-&nbsp; &nbsp; &nbsp; Register a new user </summary>
-<br>
 
-**Parameters:** No parameters 
+<summary><b><span style="color:#008000">POST</span><span style="margin-left:1em">/users</span><span style="margin-left:1em"></b> Register a new user</span></summary>
+&nbsp;
+
+**Parameters:** No parameters
 
 **Request Body:**
 ```
-{ 
-  "user": { 
-    "email": "user518@testing.com", 
-    "password": "Testing151!", 
-    "username": "user518" 
-  } 
-} 
+    {
+        "user": 
+        {
+            "email": "user518@testing.com",
+            "password": "Testing151!",
+            "username": "user518"
+        }
+    }
 ```
-
-**Responses:** 
-
-##### **Curl** #####
-
+**Responses:**
+**<h5>Curl</h5>**
 ```
-curl -X 'POST' \ 
-  'http://localhost:3000/api/users' \ 
-  -H 'accept: */*' \ 
-  -H 'Content-Type: application/json' \ 
-  -d '{ 
-  "user": { 
-    "email": "user518@testing.com", 
-    "password": "Testing151!", 
-    "username": "user518" 
-  } 
-}' 
+  curl -X 'POST' \
+  'http://localhost:3000/api/users' \
+  -H 'accept: */*' \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "user":   {
+        "email": "user518@testing.com",
+        "password": "Testing151!",
+        "username": "user518"
+    }
+}'
 ```
+**<h5>Request URL</h5>**
+http://localhost:3000/api/users
 
-##### **Request URL** #####
+**<h5>Server response</h5>**
 
-http://localhost:3000/api/users 
-
-##### **Server response** #####
-
-<table>
-  <thead>
-    <tr>
-      <th>Code</th>
-      <th>Details</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th rowspan=4>200</th>
-      <th>Response body</th>
-    </tr>
-    <tr>
-      <td> {
-      <br>
-      &nbsp; &nbsp;
-      "user": { 
-      <br>
-      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-      "email": "user518@testing.com",
-      <br>
-      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-      "username": "user518", 
-      <br>
-      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNsc3QxZDJ3czAwMDA2M3hiZTVsZHFsOHoiLCJpYXQiOjE3MDgzNTMxNjB9.qvYt8vvmA-Q6JCCjL0MSAvtw2iiO4Kmzna9ai6_BqxQ",
-      <br>
-      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-      "bio": null,
-      <br>
-      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-      "image": "https://api.realworld.io/images/smiley-cyrus.jpeg" 
-      <br>
-      &nbsp; &nbsp;
-      }
-      <br>
-      }
-      </td>
-    </tr>
-    <tr>
-      <th>Response headers</th>
-    </tr>
-    <tr>
-      <td>content-type: application/json </td>
-    </tr>
-  </tbody>
+ <table>
+    <thead>
+        <tr>
+            <th><h5>Code</h5></th>
+            <th><h5>Details</h5></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td rowspan=4><b><h5>200</h5</b></td>
+            <td><b><h5>Response Body</h5></b></td>
+        </tr>
+        <tr>
+            <td rowspan=1>
+            {
+                <br>
+                &nbsp;&nbsp; &nbsp; &nbsp; "user":
+                <br>
+                &nbsp; &nbsp;&nbsp; &nbsp; {
+                    <br>
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "email": "user518@testing.com",
+                    <br>
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "username": "user518",
+                    <br>
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNsc3QxZDJ3czAwMDA2M3hiZTVsZHFsOHoiLCJpYXQiOjE3MDgzNTMxNjB9.qvYt8vvmA-Q6JCCjL0MSAvtw2iiO4Kmzna9ai6_BqxQ",
+                    <br>
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "bio": null,
+                    <br>
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "image": "https://api.realworld.io/images/smiley-cyrus.jpeg"
+                    <br>
+                &nbsp; &nbsp; &nbsp; &nbsp; }
+                <br>
+            }
+            </td>
+        </tr>
+        <tr>
+            <td><b><h5>Response headers</h5</b></td>
+        </tr>
+        <tr>
+            <td>content-type: application/json</td>
+        </tr>
 </table>
 
-##### **Responses** #####
-<table>
-  <thead>
-    <tr>
-      <th>Code</th>
-      <th>Description</th>
-      <th>Links</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>200</td>
-      <td>User registered successfully</td>
-      <td><em>No links</em></td>
-    </tr>
-    <tr>
-  </tbody>
-</table>
+**<h5>Responses</h5>**
+
+| <h5> Code </h5> | <h5> Description </h5>       | <h5> Links </h5>    |
+| :-------------- | :--------------------------- | :------------------ |
+| 200             | User registered successfully | <em> No links </em> |
+
 </details>
 
 <details>
-<summary>
-<span style="color:#008000"><b>PUT</span>
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /users/login</b>
-&nbsp; &nbsp; &nbsp; Login </summary>
-<br>
 
-**Parameters:** No parameters 
+<summary><b><span style="color:#008000">POST</span><span style="margin-left:0.9em">/users/login</span><span style="margin-left:1em"></b>Login</span></summary>
+&nbsp;
+
+**Parameters:** No parameters
 
 **Request Body:**
 ```
-{ 
-  "user": { 
-    "email": "user518@testing.com", 
-    "password": "Testing151!" 
-  } 
-} 
+    {
+        "user": 
+        {
+            "email": "user518@testing.com",
+            "password": "Testing151!"
+        }
+    }
 ```
-
-**Responses:** 
-
-##### **Curl** #####
-
+**Responses:**
+**<h5>Curl</h5>**
 ```
-curl -X 'POST' \ 
-  'http://localhost:3000/api/users/login' \ 
-  -H 'accept: */*' \ 
-  -H 'Content-Type: application/json' \ 
-  -d '{ 
-  "user": { 
-    "email": "user518@testing.com", 
-    "password": "Testing151!" 
-  } 
-}' 
+  curl -X 'POST' \
+  'http://localhost:3000/api/users/login' \
+  -H 'accept: */*' \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "user":   {
+        "email": "user518@testing.com",
+        "password": "Testing151!"
+    }
+}'
 ```
-
-##### **Request URL** #####
-
+**<h5>Request URL</h5>**
 http://localhost:3000/api/users/login
 
-##### **Server response** #####
+**<h5>Server response</h5>**
 
-<table>
-  <thead>
-    <tr>
-      <th>Code</th>
-      <th>Details</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th rowspan=4>200</th>
-      <th>Response body</th>
-    </tr>
-    <tr>
-      <td> {
-      <br>
-      &nbsp; &nbsp;
-      "user": { 
-      <br>
-      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-      "email": "user518@testing.com",
-      <br>
-      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-      "username": "user518", 
-      <br>
-      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNsc3QxZDJ3czAwMDA2M3hiZTVsZHFsOHoiLCJpYXQiOjE3MDg1MTIxMDV9.9Ar6eoPvWM1ydXFwhsrUy2lHIhoLG5AnskFzAvd9sm4",
-      <br>
-      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-      "bio": null,
-      <br>
-      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-      "image": "https://api.realworld.io/images/smiley-cyrus.jpeg" 
-      <br>
-      &nbsp; &nbsp;
-      }
-      <br>
-      }
-      </td>
-    </tr>
-    <tr>
-      <th>Response headers</th>
-    </tr>
-    <tr>
-      <td>content-type: application/json </td>
-    </tr>
-  </tbody>
+ <table>
+    <thead>
+        <tr>
+            <th><h5>Code</h5></th>
+            <th><h5>Details</h5></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td rowspan=4><b><h5>200</h5</b></td>
+            <td><b><h5>Response Body</h5></b></td>
+        </tr>
+        <tr>
+            <td rowspan=1>
+            {
+                <br>
+                &nbsp;&nbsp; &nbsp; &nbsp; "user":
+                <br>
+                &nbsp; &nbsp;&nbsp; &nbsp; {
+                    <br>
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "email": "user518@testing.com",
+                    <br>
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "username": "user518",
+                    <br>
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNsc3QxZDJ3czAwMDA2M3hiZTVsZHFsOHoiLCJpYXQiOjE3MDg1MTIxMDV9.9Ar6eoPvWM1ydXFwhsrUy2lHIhoLG5AnskFzAvd9sm4",
+                    <br>
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "bio": null,
+                    <br>
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "image": "https://api.realworld.io/images/smiley-cyrus.jpeg"
+                    <br>
+                &nbsp; &nbsp; &nbsp; &nbsp; }
+                <br>
+            }
+            </td>
+        </tr>
+        <tr>
+            <td><b><h5>Response headers</h5</b></td>
+        </tr>
+        <tr>
+            <td>content-type: application/json</td>
+        </tr>
 </table>
 
-##### **Responses** #####
-<table>
-  <thead>
-    <tr>
-      <th>Code</th>
-      <th>Description</th>
-      <th>Links</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>200</td>
-      <td>User logged in successfully</td>
-      <td><em>No links</em></td>
-    </tr>
-    <tr>
-  </tbody>
-</table>
+**<h5>Responses</h5>**
+
+| <h5> Code </h5> | <h5> Description </h5>      | <h5> Links </h5>    |
+| :-------------- | :-------------------------- | :------------------ |
+| 200             | User logged in successfully | <em> No links </em> |
+
 </details>
 
 <details>
-<summary>
-<span style="color:#0096FF"><b>GET</span>
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /user</b>
-&nbsp; &nbsp; &nbsp; </summary>
-<br>
 
-**Parameters:** No parameters 
+<summary><b><span style="color:#0096FF">GET</span><span style="margin-left:1.5em">/user</span></b></summary>
+&nbsp;
 
-**Responses:** 
+**Parameters:** No parameters
 
-##### **Curl** #####
+**Responses:**
+**<h5>Curl</h5>**
+```
+curl -X 'GET' \
+  'http://localhost:3000/api/user' \
+  -H 'accept: */*' \
+  -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNsc3QxZDJ3czAwMDA2M3hiZTVsZHFsOHoiLCJpYXQiOjE3MDg1MTIxMDV9.9Ar6eoPvWM1ydXFwhsrUy2lHIhoLG5AnskFzAvd9sm4'
 
 ```
-curl -X 'GET' \ 
-  'http://localhost:3000/api/user' \ 
-  -H 'accept: */*' \ 
-  -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNsc3QxZDJ3czAwMDA2M3hiZTVsZHFsOHoiLCJpYXQiOjE3MDg1MTIxMDV9.9Ar6eoPvWM1ydXFwhsrUy2lHIhoLG5AnskFzAvd9sm4' 
-```
-
-##### **Request URL** #####
-
+**<h5>Request URL</h5>**
 http://localhost:3000/api/user
 
-##### **Server response** #####
+**<h5>Server response</h5>**
 
-<table>
-  <thead>
-    <tr>
-      <th>Code</th>
-      <th>Details</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th rowspan=4>200</th>
-      <th>Response body</th>
-    </tr>
-    <tr>
-      <td> {
-      <br>
-      &nbsp; &nbsp;
-      "user": { 
-      <br>
-      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-      "email": "user518@testing.com",
-      <br>
-      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-      "username": "user518", 
-      <br>
-      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNsc3QxZDJ3czAwMDA2M3hiZTVsZHFsOHoiLCJpYXQiOjE3MDg1MTI0MDh9.FkPKCwyvaMP1MftEFUaIHdx_fhmM_I46Bl7kuaASDuk",
-      <br>
-      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-      "bio": null,
-      <br>
-      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-      "image": "https://api.realworld.io/images/smiley-cyrus.jpeg" 
-      <br>
-      &nbsp; &nbsp;
-      }
-      <br>
-      }
-      </td>
-    </tr>
-    <tr>
-      <th>Response headers</th>
-    </tr>
-    <tr>
-      <td>content-type: application/json </td>
-    </tr>
-  </tbody>
+ <table>
+    <thead>
+        <tr>
+            <th><h5>Code</h5></th>
+            <th><h5>Details</h5></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td rowspan=4><b><h5>200</h5</b></td>
+            <td><b><h5>Response Body</h5></b></td>
+        </tr>
+        <tr>
+            <td rowspan=1>
+            {
+                <br>
+                &nbsp;&nbsp; &nbsp; &nbsp; "user":
+                <br>
+                &nbsp; &nbsp;&nbsp; &nbsp; {
+                    <br>
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "email": "user518@testing.com",
+                    <br>
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "username": "user518",
+                    <br>
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNsc3QxZDJ3czAwMDA2M3hiZTVsZHFsOHoiLCJpYXQiOjE3MDg1MTI0MDh9.FkPKCwyvaMP1MftEFUaIHdx_fhmM_I46Bl7kuaASDuk",
+                    <br>
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "bio": null,
+                    <br>
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "image": "https://api.realworld.io/images/smiley-cyrus.jpeg"
+                    <br>
+                &nbsp; &nbsp; &nbsp; &nbsp; }
+                <br>
+            }
+            </td>
+        </tr>
+        <tr>
+            <td><b><h5>Response headers</h5</b></td>
+        </tr>
+        <tr>
+            <td>content-type: application/json</td>
+        </tr>
 </table>
 
-##### **Responses** #####
-<table>
-  <thead>
-    <tr>
-      <th>Code</th>
-      <th>Description</th>
-      <th>Links</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>200</td>
-      <td>Current user retrieved successfully</td>
-      <td><em>No links</em></td>
-    </tr>
-    <tr>
-  </tbody>
-</table>
+**<h5>Responses</h5>**
+
+| <h5> Code </h5> | <h5> Description </h5>              | <h5> Links </h5>    |
+| :-------------- | :---------------------------------- | :------------------ |
+| 200             | Current user retrieved successfully | <em> No links </em> |
+
 </details>
 
 <details>
-<summary>
-<span style="color:#F28C28"><b>PUT</span>
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /user</b>
-&nbsp; &nbsp; &nbsp; Update user</summary>
-<br>
 
-**Parameters:** No parameters 
+<summary><b><span style="color:#FFA500">PUT</span><span style="margin-left:1.4em">/user</span><span style="margin-left:1em"></b>Update user</span></summary>
+&nbsp;
+
+**Parameters:** No parameters
 
 **Request Body:**
 ```
-{ 
-  "user": { 
-    "email": "user518_updated@testing.com" 
-  } 
-} 
+    {
+        "user": 
+        {
+            "email": "user518_updated@testing.com",
+        }
+    }
 ```
-
-**Responses:** 
-
-##### **Curl** #####
-
+**Responses:**
+**<h5>Curl</h5>**
 ```
-curl -X 'PUT' \ 
-  'http://localhost:3000/api/user' \ 
-  -H 'accept: */*' \ 
-  -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNsc3QxZDJ3czAwMDA2M3hiZTVsZHFsOHoiLCJpYXQiOjE3MDg1MTIxMDV9.9Ar6eoPvWM1ydXFwhsrUy2lHIhoLG5AnskFzAvd9sm4' \ 
-  -H 'Content-Type: application/json' \ 
-  -d '{ 
-  "user": { 
-    "email": "user518_updated@testing.com" 
-  } 
-}' 
+curl -X 'PUT' \
+  'http://localhost:3000/api/user' \
+  -H 'accept: */*' \
+  -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNsc3QxZDJ3czAwMDA2M3hiZTVsZHFsOHoiLCJpYXQiOjE3MDg1MTIxMDV9.9Ar6eoPvWM1ydXFwhsrUy2lHIhoLG5AnskFzAvd9sm4' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "user": {
+    "email": "user518_updated@testing.com"
+  }
+}
 ```
-
-##### **Request URL** #####
-
+**<h5>Request URL</h5>**
 http://localhost:3000/api/user
 
-##### **Server response** #####
+**<h5>Server response</h5>**
 
-<table>
-  <thead>
-    <tr>
-      <th>Code</th>
-      <th>Details</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th rowspan=4>200</th>
-      <th>Response body</th>
-    </tr>
-    <tr>
-      <td> {
-      <br>
-      &nbsp; &nbsp;
-      "user": { 
-      <br>
-      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-      "email": "user518@testing.com",
-      <br>
-      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-      "username": "user518", 
-      <br>
-      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNsc3QxZDJ3czAwMDA2M3hiZTVsZHFsOHoiLCJpYXQiOjE3MDg1MTQ4Mjl9.yXS6DAQavtiwMcU5KFBg6syVuFmK1lqg_Db7CK2eiFA",
-      <br>
-      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-      "bio": null,
-      <br>
-      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-      "image": "null" 
-      <br>
-      &nbsp; &nbsp;
-      }
-      <br>
-      }
-      </td>
-    </tr>
-    <tr>
-      <th>Response headers</th>
-    </tr>
-    <tr>
-      <td>content-type: application/json </td>
-    </tr>
-  </tbody>
+ <table>
+    <thead>
+        <tr>
+            <th><h5>Code</h5></th>
+            <th><h5>Details</h5></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td rowspan=4><b><h5>200</h5</b></td>
+            <td><b><h5>Response Body</h5></b></td>
+        </tr>
+        <tr>
+            <td rowspan=1>
+            {
+                <br>
+                &nbsp;&nbsp; &nbsp; &nbsp; "user":
+                <br>
+                &nbsp; &nbsp;&nbsp; &nbsp; {
+                    <br>
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "email": "user518@testing.com",
+                    <br>
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "username": "user518",
+                    <br>
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNsc3QxZDJ3czAwMDA2M3hiZTVsZHFsOHoiLCJpYXQiOjE3MDg1MTQ4Mjl9.yXS6DAQavtiwMcU5KFBg6syVuFmK1lqg_Db7CK2eiFA",
+                    <br>
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "bio": null,
+                    <br>
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "image": null
+                    <br>
+                &nbsp; &nbsp; &nbsp; &nbsp; }
+                <br>
+            }
+            </td>
+        </tr>
+        <tr>
+            <td><b><h5>Response headers</h5</b></td>
+        </tr>
+        <tr>
+            <td>content-type: application/json</td>
+        </tr>
 </table>
 
-##### **Responses** #####
-<table>
-  <thead>
-    <tr>
-      <th>Code</th>
-      <th>Description</th>
-      <th>Links</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>200</td>
-      <td>User updated successfully</td>
-      <td><em>No links</em></td>
-    </tr>
-    <tr>
-  </tbody>
-</table>
+**<h5>Responses</h5>**
+
+| <h5> Code </h5> | <h5> Description </h5>    | <h5> Links </h5>    |
+| :-------------- | :------------------------ | :------------------ |
+| 200             | User updated successfully | <em> No links </em> |
+
 </details>
 
 <details>
+
 <summary>
-<span style="color:#0096FF"><b>GET</span>
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /articles</b>
-&nbsp; &nbsp; &nbsp; Get all articles</summary>
-<br>
+<span style="color:#0096FF"><b>GET</span><span style="margin-left:1.4em">/articles<span style="margin-left:1em"></b>Get all articles</span></summary>
+&nbsp;
 
 **Parameters:** No parameters 
 
@@ -932,3 +840,12 @@ http://localhost:3000/api/articles
   </tbody>
 </table>
 </details>
+
+
+
+
+
+
+
+
+
