@@ -2,7 +2,7 @@
 
 <details>
 
-<summary><b><span style="color:#008000">POST</span><span style="margin-left:1em">/users</span><span style="margin-left:1em"></b> Register a new user</span></summary>
+<summary><b><span style="color:#008000">POST</span><span style="margin-left:1em">/users</span><span style="margin-left:5.4em"></b> Register a new user</span></summary>
 &nbsp;
 
 **Parameters:** No parameters
@@ -91,7 +91,7 @@ http://localhost:3000/api/users
 
 <details>
 
-<summary><b><span style="color:#008000">POST</span><span style="margin-left:0.9em">/users/login</span><span style="margin-left:1em"></b>Login</span></summary>
+<summary><b><span style="color:#008000">POST</span><span style="margin-left:0.9em">/users/login</span><span style="margin-left:3em"></b>Login</span></summary>
 &nbsp;
 
 **Parameters:** No parameters
@@ -250,7 +250,7 @@ http://localhost:3000/api/user
 
 <details>
 
-<summary><b><span style="color:#FFA500">PUT</span><span style="margin-left:1.4em">/user</span><span style="margin-left:1em"></b>Update user</span></summary>
+<summary><b><span style="color:#FFA500">PUT</span><span style="margin-left:1.4em">/user</span><span style="margin-left:6.5em"></b>Update user</span></summary>
 &nbsp;
 
 **Parameters:** No parameters
@@ -337,7 +337,7 @@ http://localhost:3000/api/user
 <details>
 
 <summary>
-<span style="color:#0096FF"><b>GET</span><span style="margin-left:1.4em">/articles<span style="margin-left:1em"></b>Get all articles</span></summary>
+<span style="color:#0096FF"><b>GET</span><span style="margin-left:1.4em">/articles<span style="margin-left:5.2em"></b>Get all articles</span></summary>
 &nbsp;
 
 **Parameters:** No parameters 
