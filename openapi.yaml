@@ -3,11 +3,10 @@ info:
   title: Conduit API
   description: Collection for testing the Conduit API
   version: 1.0.0
- 
+
 servers:
   - url: http://localhost:3000/api/
- 
- 
+
 paths:
   /users:
     post:
@@ -28,7 +27,7 @@ paths:
       responses:
         '200':
           description: User registered successfully
- 
+
   /users/login:
     post:
       summary: Login
@@ -47,8 +46,7 @@ paths:
       responses:
         '200':
           description: User logged in successfully
- 
- 
+
   /user:
     get:
       responses:
@@ -56,7 +54,7 @@ paths:
           description: Current user retrieved successfully
       security:
         - BearerAuth: []
- 
+
     put:
       summary: Update user
       requestBody:
@@ -75,14 +73,16 @@ paths:
           description: User updated successfully
       security:
         - BearerAuth: []
-        
+
   /articles:
     get:
       summary: Get all articles
       responses:
         '200':
           description: Articles retrieved successfully
- 
+      security:
+        - BearerAuth: []
+
     post:
       summary: Create an article
       requestBody:
@@ -102,7 +102,9 @@ paths:
       responses:
         '200':
           description: Article created successfully
- 
+      security:
+        - BearerAuth: []
+
   /articles/{slug}:
     get:
       summary: Get a single article by slug
@@ -115,7 +117,7 @@ paths:
       responses:
         '200':
           description: Article retrieved successfully
- 
+
     put:
       summary: Update an article
       parameters:
@@ -138,7 +140,7 @@ paths:
       responses:
         '200':
           description: Article updated successfully
- 
+
     delete:
       summary: Delete an article
       parameters:
@@ -150,7 +152,7 @@ paths:
       responses:
         '200':
           description: Article deleted successfully
- 
+
   /articles/{slug}/favorite:
     post:
       summary: Favorite an article
@@ -163,7 +165,7 @@ paths:
       responses:
         '200':
           description: Article favorited successfully
- 
+
     delete:
       summary: Unfavorite an article
       parameters:
@@ -175,7 +177,7 @@ paths:
       responses:
         '200':
           description: Article unfavorited successfully
- 
+
   /articles/{slug}/comments:
     post:
       summary: Create a comment for an article
@@ -199,7 +201,7 @@ paths:
       responses:
         '200':
           description: Comment created successfully
- 
+
     get:
       summary: Get all comments for an article
       parameters:
@@ -211,7 +213,7 @@ paths:
       responses:
         '200':
           description: Comments retrieved successfully
- 
+
   /articles/{slug}/comments/{commentId}:
     delete:
       summary: Delete a comment for an article
@@ -229,7 +231,7 @@ paths:
       responses:
         '200':
           description: Comment deleted successfully
- 
+
   /profiles/celeb_{USERNAME}:
     get:
       summary: Get a profile by username
@@ -242,7 +244,7 @@ paths:
       responses:
         '200':
           description: Profile retrieved successfully
- 
+
   /profiles/celeb_{USERNAME}/follow:
     post:
       summary: Follow a profile
@@ -255,7 +257,7 @@ paths:
       responses:
         '200':
           description: Profile followed successfully
- 
+
     delete:
       summary: Unfollow a profile
       parameters:
@@ -267,14 +269,14 @@ paths:
       responses:
         '200':
           description: Profile unfollowed successfully
- 
+
   /tags:
     get:
       summary: Get all tags
       responses:
         '200':
           description: Tags retrieved successfully
-          
+
 components:
   securitySchemes:
     BearerAuth:

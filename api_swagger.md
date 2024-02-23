@@ -2,7 +2,7 @@
 
 <details>
 
-<summary><b><span style="color:#008000">POST</span> &nbsp; &nbsp; /users</b>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Register a new user</summary>
+<summary><b><span style="color:#008000">POST</span> &nbsp; &nbsp; &nbsp; /users</b>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Register a new user</summary>
 &nbsp;
 
 **Parameters:** No parameters
@@ -91,7 +91,7 @@ http://localhost:3000/api/users
 
 <details>
 
-<summary><b><span style="color:#008000">POST</span> &nbsp; &nbsp; /users/login</b>&nbsp; &nbsp; &nbsp; Login</summary>
+<summary><b><span style="color:#008000">POST</span> &nbsp; &nbsp; &nbsp; /users/login</b>&nbsp; &nbsp; &nbsp; Login</summary>
 &nbsp;
 
 **Parameters:** No parameters
@@ -178,7 +178,7 @@ http://localhost:3000/api/users/login
 
 <details>
 
-<summary><b><span style="color:#0096FF">GET</span> &nbsp; &nbsp; &nbsp; /user</b></summary>
+<summary><b><span style="color:#0096FF">GET</span> &nbsp; &nbsp; &nbsp; &nbsp; /user</b></summary>
 &nbsp;
 
 **Parameters:** No parameters
@@ -250,7 +250,7 @@ http://localhost:3000/api/user
 
 <details>
 
-<summary><b><span style="color:#FFA500">PUT</span> &nbsp; &nbsp; &nbsp;/user</b>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Update user</summary>
+<summary><b><span style="color:#FFA500">PUT</span> &nbsp; &nbsp; &nbsp; &nbsp;/user</b>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Update user</summary>
 &nbsp;
 
 **Parameters:** No parameters
@@ -337,7 +337,7 @@ http://localhost:3000/api/user
 <details>
 
 <summary>
-<span style="color:#0096FF"><b>GET</span>&nbsp; &nbsp; &nbsp; /articles</b>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Get all articles</span></summary>
+<span style="color:#0096FF"><b>GET</span>&nbsp; &nbsp; &nbsp; &nbsp; /articles</b> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Get all articles</span></summary>
 &nbsp;
 
 **Parameters:** No parameters 
@@ -732,6 +732,147 @@ http://localhost:3000/api/articles
 </table>
 </details>
 
+<details>
+
+<summary><b><span style="color:#008000">POST</span> &nbsp; &nbsp; /articles</b>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Create an article</summary>
+&nbsp;
+
+**Parameters:** No parameters
+
+**Request Body:**
+```
+{
+  "article": {
+    "title": "The best flowers by post: Delight delivered to your doorstep",
+    "description": "Whether you’re wishing someone a happy birthday, good luck or sending roses just because, a stunning bouquet sometimes speaks louder than words.",
+    "body": "There are plenty of avenues you can take to send your loved ones (or yourself) fresh arrangements without even leaving the house. Some companies are more conventional and hand deliver blooms in vases, some send blossoms in a letterbox-shaped package and many are tapping into the increasing popularity of subscription services — by sending you the most in-season flowers on a weekly or monthly basis throughout the year.",
+    "tagList": [
+      "Flowers", "Delivery"
+    ]
+  }
+}
+```
+
+**Responses:**
+**<h5>Curl</h5>**
+```
+curl -X 'POST' \
+  'http://localhost:3000/api/articles' \
+  -H 'accept: */*' \
+  -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNsc3QxZDJ3czAwMDA2M3hiZTVsZHFsOHoiLCJpYXQiOjE3MDg1MTIxMDV9.9Ar6eoPvWM1ydXFwhsrUy2lHIhoLG5AnskFzAvd9sm4' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "article": {
+    "title": "The best flowers by post: Delight delivered to your doorstep",
+    "description": "Whether you’re wishing someone a happy birthday, good luck or sending roses just because, a stunning bouquet sometimes speaks louder than words.",
+    "body": "There are plenty of avenues you can take to send your loved ones (or yourself) fresh arrangements without even leaving the house. Some companies are more conventional and hand deliver blooms in vases, some send blossoms in a letterbox-shaped package and many are tapping into the increasing popularity of subscription services — by sending you the most in-season flowers on a weekly or monthly basis throughout the year.",
+    "tagList": [
+      "Flowers", "Delivery"
+    ]
+  }
+}'
+
+```
+**<h5>Request URL</h5>**
+http://localhost:3000/api/articles
+
+**<h5>Server response</h5>**
+
+ <table>
+    <thead>
+        <tr>
+            <th><h5>Code</h5></th>
+            <th><h5>Details</h5></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td rowspan=4><b><h5>200</h5</b></td>
+            <td><b><h5>Response Body</h5></b></td>
+        </tr>
+        <tr>
+            <td rowspan=1>
+            {
+                <br>
+                &nbsp;&nbsp; &nbsp; &nbsp; "article":
+                <br>
+                &nbsp; &nbsp;&nbsp; &nbsp; {
+                    <br>
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                    "slug": "the-best-flowers-by-post:-delight-delivered-to-your-doorstep-6",
+                    <br>
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                    "title": "The best flowers by post: Delight delivered to your doorstep",
+                    <br>
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                    "description": "Whether you’re wishing someone a happy birthday, good luck or sending roses just because, a stunning bouquet sometimes speaks louder than words.",
+                    <br>
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                    "body": "There are plenty of avenues you can take to send your loved ones (or yourself) fresh arrangements without even leaving the house. Some companies are more conventional and hand deliver blooms in vases, some send blossoms in a letterbox-shaped package and many are tapping into the increasing popularity of subscription services — by sending you the most in-season flowers on a weekly or monthly basis throughout the year.",
+                    <br>
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                    "tagList": [
+                    <br>
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                    "Delivery",
+                    <br>
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                    "Flowers"
+                    <br>
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                    ],
+                    <br>
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                    "createdAt": "2024-02-23T13:41:10.926Z",
+                    <br>
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                    "updatedAt": "2024-02-23T13:41:10.926Z",
+                    <br>
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                    "favorited": false,
+                    <br>
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                    "favoritesCount": 0,
+                    <br>
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                    "author": {
+                    <br>
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+                    "username": "user518",
+                    <br>
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;    
+                    "bio": null,                
+                    <br>
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+                    "image": null,
+                    <br>
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                    "following": false
+                    <br>
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                    }
+                    <br>
+                    &nbsp; &nbsp; &nbsp; &nbsp; 
+                    }
+                <br>
+            }
+            </td>
+        </tr>
+        <tr>
+            <td><b><h5>Response headers</h5</b></td>
+        </tr>
+        <tr>
+            <td>content-type: application/json</td>
+        </tr>
+</table>
+
+**<h5>Responses</h5>**
+
+| <h5> Code </h5> | <h5> Description </h5>       | <h5> Links </h5>    |
+| :-------------- | :--------------------------- | :------------------ |
+| 200             | Article created successfully | <em> No links </em> |
+
+</details>
 
 
 
