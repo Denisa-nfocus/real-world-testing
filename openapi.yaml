@@ -140,6 +140,8 @@ paths:
       responses:
         '200':
           description: Article updated successfully
+      security:
+        - BearerAuth: []
 
     delete:
       summary: Delete an article
