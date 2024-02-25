@@ -1203,7 +1203,6 @@ http://localhost:3000/api/articles/how-to-train-your-dragon-1
             <p>
                 <h6>Slug<sup><span style="color:#EE4B2B"> * required</span></sup>
                 <br>
-                <br>
                 string
                 <br>
                 (path)
