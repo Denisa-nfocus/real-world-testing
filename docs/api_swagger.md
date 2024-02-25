@@ -1210,7 +1210,7 @@ http://localhost:3000/api/articles/how-to-train-your-dragon-1
                 </h6>
             </p>
             </td>
-            <td><h5>the-best-flowers-by-post:-delight-delivered-to-your-doorstep-6</h5></td>
+            <td rowspan=2><h5>the-best-flowers-by-post:-delight-delivered-to-your-doorstep-6</h5></td>
         </tr>
         <tr>
             <td>
