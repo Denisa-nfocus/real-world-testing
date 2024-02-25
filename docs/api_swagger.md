@@ -2,7 +2,7 @@
 
 <details>
 
-<summary><b><span style="color:#008000">POST</span> &nbsp; &nbsp; &nbsp; /users</b>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Register a new user</summary>
+<summary><b><span style="color:#008000">POST</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /users</b>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Register a new user</summary>
 &nbsp;
 
 **Parameters:** No parameters
@@ -93,7 +93,7 @@ http://localhost:3000/api/users
 
 <details>
 
-<summary><b><span style="color:#008000">POST</span> &nbsp; &nbsp; &nbsp; /users/login</b>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Login</summary>
+<summary><b><span style="color:#008000">POST</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /users/login</b> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Login</summary>
 &nbsp;
 
 **Parameters:** No parameters
@@ -183,7 +183,7 @@ http://localhost:3000/api/users/login
 
 <details>
 
-<summary><b><span style="color:#0096FF">GET</span> &nbsp; &nbsp; &nbsp; &nbsp; /user</b></summary>
+<summary><b><span style="color:#0096FF">GET</span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;/user</b></summary>
 &nbsp;
 
 **Parameters:** No parameters
@@ -257,7 +257,7 @@ http://localhost:3000/api/user
 
 <details>
 
-<summary><b><span style="color:#FFA500">PUT</span> &nbsp; &nbsp; &nbsp; &nbsp;/user</b> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Update user</summary>
+<summary><b><span style="color:#FFA500">PUT</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /user</b> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Update user</summary>
 &nbsp;
 
 **Parameters:** No parameters
@@ -347,7 +347,7 @@ http://localhost:3000/api/user
 <details>
 
 <summary>
-<span style="color:#0096FF"><b>GET</span>&nbsp; &nbsp; &nbsp; &nbsp; /articles</b> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Get all articles</span></summary>
+<span style="color:#0096FF"><b>GET</span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;/articles</b> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Get all articles</span></summary>
 &nbsp;
 
 **Parameters:** No parameters 
@@ -743,7 +743,7 @@ http://localhost:3000/api/articles
 
 <details>
 
-<summary><b><span style="color:#008000">POST</span> &nbsp; &nbsp; /articles</b>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Create an article</summary>
+<summary><b><span style="color:#008000">POST</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;/articles</b>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Create an article</summary>
 &nbsp;
 
 **Parameters:** No parameters
@@ -885,7 +885,7 @@ http://localhost:3000/api/articles
 
 <details>
 
-<summary><b><span style="color:#0096FF">GET</span>&nbsp; &nbsp; &nbsp; &nbsp;/articles/{slug}</b>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Get a single article by slug </summary>
+<summary><b><span style="color:#0096FF">GET</span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /articles/{slug}</b>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Get a single article by slug </summary>
 &nbsp;
 
 **Parameters:**
@@ -1031,7 +1031,7 @@ http://localhost:3000/api/articles/new-one-2
 
 <details>
 
-<summary><b><span style="color:#FFA500">PUT</span>&nbsp; &nbsp; &nbsp; &nbsp;/articles/{slug}</b>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Update an article </summary>
+<summary><b><span style="color:#FFA500">PUT</span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;/articles/{slug}</b>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Update an article </summary>
 &nbsp;
 
 **Parameters:**
@@ -1044,7 +1044,7 @@ http://localhost:3000/api/articles/new-one-2
     </thead>
     <tbody>
         <tr>
-            <td>
+            <td rowspan=2>
             <p>
                 <h6>Slug<sup><span style="color:#EE4B2B"> * required</span></sup>
                 <br>
@@ -1184,3 +1184,76 @@ http://localhost:3000/api/articles/how-to-train-your-dragon-1
 
 </details>
 
+<details>
+
+<summary><b><span style="color:#EE4B2B">DELETE</span>&nbsp; &nbsp; &nbsp; &nbsp;/articles/{slug}</b>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Delete an article </summary>
+&nbsp;
+
+**Parameters:**
+<table>
+    <thead>
+        <tr>
+            <th><h5>Name</h5></th>
+            <th><h5>Description</h5></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td rowspan=2>
+            <p>
+                <h6>Slug<sup><span style="color:#EE4B2B"> * required</span></sup>
+                <br>
+                <br>
+                string
+                <br>
+                (path)
+                </h6>
+            </p>
+            </td>
+            <td><h5>the-best-flowers-by-post:-delight-delivered-to-your-doorstep-6</h5></td>
+        </tr>
+        <tr>
+            <td>
+            </td>
+        </tr>
+</table>
+
+**Responses:**
+**<h5>Curl</h5>**
+```
+curl -X 'DELETE' \
+  'http://localhost:3000/api/articles/the-best-flowers-by-post%3A-delight-delivered-to-your-doorstep-6' \
+  -H 'accept: */*' \
+  -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNsc3QxZDJ3czAwMDA2M3hiZTVsZHFsOHoiLCJpYXQiOjE3MDg1MTIxMDV9.9Ar6eoPvWM1ydXFwhsrUy2lHIhoLG5AnskFzAvd9sm4'
+```
+**<h5>Request URL</h5>**
+http://localhost:3000/api/articles/the-best-flowers-by-post%3A-delight-delivered-to-your-doorstep-6
+
+**<h5>Server response</h5>**
+
+ <table>
+    <thead>
+        <tr>
+            <th><h5>Code</h5></th>
+            <th><h5>Details</h5></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td rowspan=3><b><h5>200</h5</b></td>
+        </tr>
+        <tr>
+            <td><b><h5>Response headers</h5</b></td>
+        </tr>
+        <tr>
+            <td>content-type: application/json</td>
+        </tr>
+</table>
+
+**<h5>Responses</h5>**
+
+| <h5> Code </h5> | <h5> Description </h5>       | <h5> Links </h5>    |
+| :-------------- | :--------------------------- | :------------------ |
+| 200             | Article deleted successfully | <em> No links </em> |
+
+</details>
