@@ -1199,7 +1199,7 @@ http://localhost:3000/api/articles/how-to-train-your-dragon-1
     </thead>
     <tbody>
         <tr>
-            <td rowspan=2>
+            <td>
             <p>
                 <h6>Slug<sup><span style="color:#EE4B2B"> * required</span></sup>
                 <br>
@@ -1210,7 +1210,7 @@ http://localhost:3000/api/articles/how-to-train-your-dragon-1
                 </h6>
             </p>
             </td>
-            <td rowspan=1><h5>the-best-flowers-by-post:-delight-delivered-to-your-doorstep-6</h5></td>
+            <td><h5>the-best-flowers-by-post:-delight-delivered-to-your-doorstep-6</h5></td>
         </tr>
         <tr>
             <td>
