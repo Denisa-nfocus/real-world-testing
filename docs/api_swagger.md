@@ -911,10 +911,6 @@ http://localhost:3000/api/articles
             </td>
             <td><h5>new-one-2</h5></td>
         </tr>
-        <tr>
-            <td>
-            </td>
-        </tr>
 </table>
 
 **Responses:**
@@ -1056,10 +1052,6 @@ http://localhost:3000/api/articles/new-one-2
             </p>
             </td>
             <td><h5>how-to-train-your-dragon-1</h5></td>
-        </tr>
-        <tr>
-            <td>
-            </td>
         </tr>
 </table>
 
