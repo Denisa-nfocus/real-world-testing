@@ -1206,8 +1206,8 @@ http://localhost:3000/api/articles/how-to-train-your-dragon-1
                 string
                 <br>
                 (path)
-                </h6>
             </p>
+                </h6>
             </td>
             <td><h5>the-best-flowers-by-post:-delight-delivered-to-your-doorstep-6</h5></td>
         </tr>
