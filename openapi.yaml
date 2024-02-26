@@ -49,6 +49,7 @@ paths:
 
   /user:
     get:
+      summary: Get current user
       responses:
         '200':
           description: Current user retrieved successfully
@@ -56,7 +57,7 @@ paths:
         - BearerAuth: []
 
     put:
-      summary: Update user
+      summary: Update current user
       requestBody:
         required: true
         content:
@@ -74,12 +75,71 @@ paths:
       security:
         - BearerAuth: []
 
-  /articles:
+  /articles/feed:
     get:
-      summary: Get all articles
+      summary: Get most recent articles from users you follow
+      parameters:
+        - name: offset
+          in: query
+          description: The number of items to skip before starting to collect the result set.
+          required: false
+          schema:
+            type: integer
+            minimum: 0
+        - name: limit
+          in: query
+          description: The numbers of items to return.
+          required: false
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 100
       responses:
         '200':
-          description: Articles retrieved successfully
+          description: Successfully retrieved the most recent articles from users you follow
+      security:
+        - BearerAuth: []
+
+  /articles:
+    get:
+      summary: Get recent articles globally
+      parameters:
+        - name: tag
+          in: query
+          description: Filter by tag
+          required: false
+          schema:
+            type: string
+        - name: author
+          in: query
+          description: Filter by author (username)
+          required: false
+          schema:
+            type: string
+        - name: favorited
+          in: query
+          description: Filter by favorites of a user (username)
+          required: false
+          schema:
+            type: string
+        - name: offset
+          in: query
+          description: The number of items to skip before starting to collect the result set.
+          required: false
+          schema:
+            type: integer
+            minimum: 0
+        - name: limit
+          in: query
+          description: The numbers of items to return.
+          required: false
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 100
+      responses:
+        '200':
+          description: Global articles retrieved successfully
       security:
         - BearerAuth: []
 
@@ -107,7 +167,7 @@ paths:
 
   /articles/{slug}:
     get:
-      summary: Get a single article by slug
+      summary: Get an article
       parameters:
         - name: slug
           in: path
@@ -154,6 +214,8 @@ paths:
       responses:
         '200':
           description: Article deleted successfully
+      security:
+        - BearerAuth: []
 
   /articles/{slug}/favorite:
     post:
@@ -167,6 +229,8 @@ paths:
       responses:
         '200':
           description: Article favorited successfully
+      security:
+        - BearerAuth: []
 
     delete:
       summary: Unfavorite an article
