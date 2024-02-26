@@ -2,7 +2,7 @@
 
 <details>
 
-<summary><b><span style="color:#0096FF">GET</span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;/articles/feed</b>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Get most recent articles from users you follow </summary>
+<summary><b><span style="color:#0096FF">GET</span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;/articles/feed</b>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Get most recent articles from users you follow </summary>
 &nbsp;
 
 **Parameters:**
@@ -299,8 +299,8 @@ http://localhost:3000/api/articles/feed?offset=2&limit=3
        <br>
        &nbsp; &nbsp;
        "articlesCount": 24
-    <br>
-    }
+       <br>
+        }
       </td>
     </tr>
     <tr>
@@ -314,18 +314,18 @@ http://localhost:3000/api/articles/feed?offset=2&limit=3
 
 **<h5>Responses</h5>**
 
-| <h5> Code </h5> | <h5> Description </h5>       | <h5> Links </h5>    |
-| :-------------- | :--------------------------- | :------------------ |
-| 200             | Article deleted successfully | <em> No links </em> |
-| 401             | Unauthorized                 | <em> No links </em> |
-| 422             | Unexpected error             | <em> No links </em> |
+| <h5> Code </h5> | <h5> Description </h5>                                                | <h5> Links </h5>    |
+| :-------------- | :-------------------------------------------------------------------- | :------------------ |
+| 200             | Successfully retrieved the most recent articles from users you follow | <em> No links </em> |
+| 401             | Unauthorized                                                          | <em> No links </em> |
+| 422             | Unexpected error                                                      | <em> No links </em> |
 
 </details>
 
 <details>
 
 <summary>
-<span style="color:#0096FF"><b>GET</span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;/articles</b> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Get recent articles globally</span></summary>
+<span style="color:#0096FF"><b>GET</span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;/articles</b> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Get recent articles globally</span></summary>
 &nbsp;
 
 **Parameters:**
@@ -630,8 +630,8 @@ http://localhost:3000/api/articles?tag=dicta&author=Andrey%20Esteban&favorited=u
        <br>
        &nbsp; &nbsp;
        "articlesCount": 2
-    <br>
-    }
+        <br>
+        }
       </td>
     </tr>
     <tr>
@@ -814,7 +814,7 @@ http://localhost:3000/api/articles
         <tr>
             <td>
             <p>
-                <h6>Slug<sup><span style="color:#EE4B2B"> * required</span></sup>
+                <h6>slug<sup><span style="color:#EE4B2B"> * required</span></sup>
                 <br>
                 <br>
                 string
@@ -942,7 +942,7 @@ http://localhost:3000/api/articles/new-one-2
 
 <details>
 
-<summary><b><span style="color:#FFA500">PUT</span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;/articles/{slug}</b>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Update an article </summary>
+<summary><b><span style="color:#FFA500">PUT</span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /articles/{slug}</b> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Update an article </summary>
 &nbsp;
 
 **Parameters:**
@@ -957,7 +957,7 @@ http://localhost:3000/api/articles/new-one-2
         <tr>
             <td rowspan=2>
             <p>
-                <h6>Slug<sup><span style="color:#EE4B2B"> * required</span></sup>
+                <h6>slug<sup><span style="color:#EE4B2B"> * required</span></sup>
                 <br>
                 <br>
                 string
@@ -1095,7 +1095,7 @@ http://localhost:3000/api/articles/how-to-train-your-dragon-1
 
 <details>
 
-<summary><b><span style="color:#EE4B2B">DELETE</span>&nbsp; &nbsp; &nbsp; &nbsp;/articles/{slug}</b>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Delete an article </summary>
+<summary><b><span style="color:#EE4B2B">DELETE</span>&nbsp; &nbsp; &nbsp; &nbsp; /articles/{slug}</b>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Delete an article </summary>
 &nbsp;
 
 **Parameters:**
@@ -1110,7 +1110,7 @@ http://localhost:3000/api/articles/how-to-train-your-dragon-1
         <tr>
             <td>
             <p>
-                <h6>Slug<sup><span style="color:#EE4B2B"> * required</span></sup>
+                <h6>slug<sup><span style="color:#EE4B2B"> * required</span></sup>
                 <br>
                 string
                 <br>
