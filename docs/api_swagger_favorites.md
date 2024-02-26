@@ -117,5 +117,7 @@ http://localhost:3000/api/articles/this-is-my-article-1/favorite
 | <h5> Code </h5> | <h5> Description </h5>         | <h5> Links </h5>    |
 | :-------------- | :----------------------------- | :------------------ |
 | 200             | Article favorited successfully | <em> No links </em> |
+| 401             | Unauthorized                   | <em> No links </em> |
+| 422             | Unexpected error               | <em> No links </em> |
 
 </details>

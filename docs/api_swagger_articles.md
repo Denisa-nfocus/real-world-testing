@@ -317,6 +317,8 @@ http://localhost:3000/api/articles/feed?offset=2&limit=3
 | <h5> Code </h5> | <h5> Description </h5>       | <h5> Links </h5>    |
 | :-------------- | :--------------------------- | :------------------ |
 | 200             | Article deleted successfully | <em> No links </em> |
+| 401             | Unauthorized                 | <em> No links </em> |
+| 422             | Unexpected error             | <em> No links </em> |
 
 </details>
 
@@ -642,23 +644,13 @@ http://localhost:3000/api/articles?tag=dicta&author=Andrey%20Esteban&favorited=u
 </table>
 
 ##### **Responses** #####
-<table>
-  <thead>
-    <tr>
-      <th>Code</th>
-      <th>Description</th>
-      <th>Links</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>200</td>
-      <td>Global articles retrieved successfully</td>
-      <td><em>No links</em></td>
-    </tr>
-    <tr>
-  </tbody>
-</table>
+
+| <h5> Code </h5> | <h5> Description </h5>                 | <h5> Links </h5>    |
+| :-------------- | :------------------------------------- | :------------------ |
+| 200             | Global articles retrieved successfully | <em> No links </em> |
+| 401             | Unauthorized                           | <em> No links </em> |
+| 422             | Unexpected error                       | <em> No links </em> |
+
 </details>
 
 <details>
@@ -716,7 +708,7 @@ http://localhost:3000/api/articles
     </thead>
     <tbody>
         <tr>
-            <td rowspan=4><b><h5>200</h5</b></td>
+            <td rowspan=4><b><h5>201</h5</b></td>
             <td><b><h5>Response Body</h5></b></td>
         </tr>
         <tr>
@@ -799,7 +791,9 @@ http://localhost:3000/api/articles
 
 | <h5> Code </h5> | <h5> Description </h5>       | <h5> Links </h5>    |
 | :-------------- | :--------------------------- | :------------------ |
-| 200             | Article created successfully | <em> No links </em> |
+| 201             | Article created successfully | <em> No links </em> |
+| 401             | Unauthorized                 | <em> No links </em> |
+| 422             | Unexpected error             | <em> No links </em> |
 
 </details>
 
@@ -942,6 +936,7 @@ http://localhost:3000/api/articles/new-one-2
 | <h5> Code </h5> | <h5> Description </h5>         | <h5> Links </h5>    |
 | :-------------- | :----------------------------- | :------------------ |
 | 200             | Article retrieved successfully | <em> No links </em> |
+| 422             | Unexpected error               | <em> No links </em> |
 
 </details>
 
@@ -1093,6 +1088,8 @@ http://localhost:3000/api/articles/how-to-train-your-dragon-1
 | <h5> Code </h5> | <h5> Description </h5>       | <h5> Links </h5>    |
 | :-------------- | :--------------------------- | :------------------ |
 | 200             | Article updated successfully | <em> No links </em> |
+| 401             | Unauthorized                 | <em> No links </em> |
+| 422             | Unexpected error             | <em> No links </em> |
 
 </details>
 
@@ -1162,5 +1159,7 @@ http://localhost:3000/api/articles/the-best-flowers-by-post%3A-delight-delivered
 | <h5> Code </h5> | <h5> Description </h5>       | <h5> Links </h5>    |
 | :-------------- | :--------------------------- | :------------------ |
 | 200             | Article deleted successfully | <em> No links </em> |
+| 401             | Unauthorized                 | <em> No links </em> |
+| 422             | Unexpected error             | <em> No links </em> |
 
 </details>

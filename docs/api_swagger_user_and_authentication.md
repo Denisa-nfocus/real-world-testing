@@ -48,7 +48,7 @@ http://localhost:3000/api/users
     </thead>
     <tbody>
         <tr>
-            <td rowspan=4><b><h5>200</h5</b></td>
+            <td rowspan=4><b><h5>201</h5</b></td>
             <td><b><h5>Response Body</h5></b></td>
         </tr>
         <tr>
@@ -87,7 +87,8 @@ http://localhost:3000/api/users
 
 | <h5> Code </h5> | <h5> Description </h5>       | <h5> Links </h5>    |
 | :-------------- | :--------------------------- | :------------------ |
-| 200             | User registered successfully | <em> No links </em> |
+| 201             | User registered successfully | <em> No links </em> |
+| 422             | Unexpected error             | <em> No links </em> |
 
 </details>
 
@@ -178,6 +179,8 @@ http://localhost:3000/api/users/login
 | <h5> Code </h5> | <h5> Description </h5>      | <h5> Links </h5>    |
 | :-------------- | :-------------------------- | :------------------ |
 | 200             | User logged in successfully | <em> No links </em> |
+| 401             | Unauthorized                | <em> No links </em> |
+| 422             | Unexpected error            | <em> No links </em> |
 
 </details>
 
@@ -252,6 +255,8 @@ http://localhost:3000/api/user
 | <h5> Code </h5> | <h5> Description </h5>              | <h5> Links </h5>    |
 | :-------------- | :---------------------------------- | :------------------ |
 | 200             | Current user retrieved successfully | <em> No links </em> |
+| 401             | Unauthorized                        | <em> No links </em> |
+| 422             | Unexpected error                    | <em> No links </em> |
 
 </details>
 
@@ -341,5 +346,7 @@ http://localhost:3000/api/user
 | <h5> Code </h5> | <h5> Description </h5>    | <h5> Links </h5>    |
 | :-------------- | :------------------------ | :------------------ |
 | 200             | User updated successfully | <em> No links </em> |
+| 401             | Unauthorized              | <em> No links </em> |
+| 422             | Unexpected error          | <em> No links </em> |
 
 </details>
