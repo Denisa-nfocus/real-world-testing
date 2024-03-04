@@ -1,0 +1,107 @@
+accessToken: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNsc3cwaHQ3NDAwMDE5ZW5saXZ2c3N6cGkiLCJpYXQiOjE3MDk1MTY0MDl9.5SaSx1hTzdhY_IQcAbpDAA8IGHjNAAMiC5j5lzXalEg'
+API_URL: 'http://localhost:3000/api'
+slugArray:
+  - 'new-one-2'
+  - 'how-to-train-your-dragon-1'
+  - 'the-best-flowers-by-post:-delight-delivered-to-your-doorstep-6'
+  - 'this-is-my-article-1'
+  - 'We-need-to-navigate-the-virtual-SSL-transmitter!-120833'
+  - 'Use-the-bluetooth-TCP-capacitor-then-you-can-reboot-the-open-source-hard-drive!-120803'
+commentId: '55'
+usernameArray:
+  - 'Gerome'
+  - 'username_1'
+
+apiEndpoints:
+  - url: 'http://localhost:3000/users'
+    method: 'post'
+    payload:
+      user:
+        email: 'user518@testing.com'
+        password: 'Testing151!'
+        username: 'user518'
+
+  - url: 'http://localhost:3000/user'
+    method: 'get'
+    payload:
+      user:
+        email: 'user518@testing.com'
+        password: 'Testing151!'
+
+  - url: 'http://localhost:3000/user'
+    method: 'get'
+
+  - url: 'http://localhost:3000/user'
+    method: 'put'
+    payload:
+      user:
+        email: 'user518_updated@testing.com'
+
+  - url: 'http://localhost:3000/articles/feed?offset=2&limit=3'
+    method: 'get'
+
+  - url: 'http://localhost:3000/articles?tag=Dicta&author=Andrey%20Esteban&favorited=user518'
+    method: 'get'
+
+  - url: 'http://localhost:3000/articles'
+    method: 'post'
+    payload:
+      article:
+        title: 'The best flowers by post: Delight delivered to your doorstep'
+        description: 'Whether you’re wishing someone a happy birthday, good luck or sending roses just because, a stunning bouquet sometimes speaks louder than words.'
+        body: 'There are plenty of avenues you can take to send your loved ones (or yourself) fresh arrangements without even leaving the house. Some companies are more conventional and hand deliver blooms in vases, some send blossoms in a letterbox-shaped package and many are tapping into the increasing popularity of subscription services — by sending you the most in-season flowers on a weekly or monthly basis throughout the year.'
+        tagList:
+          - 'Flowers'
+          - 'Delivery'
+
+  - url: 'http://localhost:3000/articles/new-one-2'
+    method: 'get'
+
+  - url: 'http://localhost:3000/articles/how-to-train-your-dragon-1'
+    method: 'put'
+    payload:
+      article:
+        body: 'with enough food'
+
+  - url: 'http://localhost:3000/articles/the-best-flowers-by-post:-delight-delivered-to-your-doorstep-6'
+    method: 'delete'
+
+  - url: 'http://localhost:3000/articles/this-is-my-article-1/favorite'
+    method: 'post'
+    payload:
+      article:
+        favorited: true
+
+  - url: 'http://localhost:3000/articles/We-need-to-navigate-the-virtual-SSL-transmitter!-120833/favorite'
+    method: 'delete'
+    payload:
+      article:
+        favorited: false
+
+  - url: 'http://localhost:3000/articles/new-one-2/comments'
+    method: 'get'
+
+  - url: 'http://localhost:3000/articles/Use-the-bluetooth-TCP-capacitor-then-you-can-reboot-the-open-source-hard-drive!-120803/comments'
+    method: 'post'
+    payload:
+      comment:
+        body: 'This is my first comment.'
+
+  - url: 'http://localhost:3000/articles/Use-the-bluetooth-TCP-capacitor-then-you-can-reboot-the-open-source-hard-drive!-120803/comments/55'
+    method: 'delete'
+
+  - url: 'http://localhost:3000/profiles/Gerome'
+    method: 'get'
+
+  - url: 'http://localhost:3000/profiles/username_1/follow'
+    method: 'post'
+    payload:
+      following: true
+
+  - url: 'http://localhost:3000/profiles/username_1/follow'
+    method: 'delete'
+    payload:
+      following: false
+
+  - url: 'http://localhost:3000/tags'
+    method: 'get'
